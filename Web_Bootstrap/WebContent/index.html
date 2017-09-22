@@ -12,26 +12,61 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5" style="background: blue">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
+				style="background: blue">
 				<p>Párrafo 1</p>
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5" style="background: gray;">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
+				style="background: gray;">
 				<p>Párrafo 2</p>
+				<div class="row">
+					<div class="col-lg-6">
+						<p>COL 1</p>
+					</div>
+					<div class="col-lg-6">
+						<p>COL 2</p>
+					</div>
+				</div>
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5" style="background: red;">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
+				style="background: red;">
 				<p>Párrafo 3</p>
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5" style="background: yellow;">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
+				style="background: yellow;">
 				<p>Párrafo 4</p>
 			</div>
 		</div>
-	
+
+
+		<div class="row">
+			<div class="btn-group">
+				<button type="button" id="btnGroupDrop1"
+					class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					Primary <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu"
+					aria-labelledby="btnGroupDrop1">
+					<li><a href="http://www.google.es">Google</a></li>
+					<li><a href="http://www.google.es">Google</a></li>
+				</ul>
+			</div>
+			<div class="btn-group" role="group">
+				<button id="btnGroupDrop1" type="button"
+					class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">Dropdown</button>
+				<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+					<a class="dropdown-item" href="#">Dropdown link</a> <a
+						class="dropdown-item" href="#">Dropdown link</a>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

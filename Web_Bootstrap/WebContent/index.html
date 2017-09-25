@@ -1,73 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="ISO-8859-1">
-<title>Web con Bootstrap</title>
+<title>Web Bootstrap</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 
+<!-- Stylesheets -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+<style type="text/css">
+.container {
+	margin-top: 30px;
+}
+
+.subscriber {
+	margin-top: 30px;
+}
+</style>
 </head>
 <body>
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
-				style="background: blue">
-				<p>Párrafo 1</p>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
-				style="background: gray;">
-				<p>Párrafo 2</p>
-				<div class="row">
-					<div class="col-lg-6">
-						<p>COL 1</p>
+		<!-- <div class="container-fluid"> -->
+		<div class="row justify-content-center">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<h1>Login</h1>
+				<hr>
+				<form role="form" method="POST" action="principal.html">
+					<div class="form-group">
+						<label for="email">Email address</label> <input type="email"
+							class="form-control" id="email" aria-describedby="email Help"
+							placeholder="Email" autofocus> <small id="emailHelp"
+							class="form-text text-muted">Email Personal para Login</small>
 					</div>
-					<div class="col-lg-6">
-						<p>COL 2</p>
+					<div class="form-group">
+						<label for="password">Password</label> <input type="password"
+							class="form-control" id="password" placeholder="Password">
 					</div>
-				</div>
+					<div class="form-check">
+						<label class="form-check-label"> <input type="checkbox"
+							class="form-check-input"> Recordar
+						</label>
+					</div>
+					<button type="submit" class="btn btn-primary">
+						<i class="fa fa-sign-in"></i> Enviar
+					</button>
+				</form>
 			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
-				style="background: red;">
-				<p>Párrafo 3</p>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-5"
-				style="background: yellow;">
-				<p>Párrafo 4</p>
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<h1>Registro</h1>
+				<hr>
+				<form class="form-horizontal" role="form" method="POST"
+					action="/register">
+					<div class="row">
+						<div class="col-md-3 field-label-responsive">
+							<label for="name">Nombre</label>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon" style="width: 2.6rem">
+										<i class="fa fa-user"></i>
+									</div>
+									<input type="text" name="nombre"
+										class="form-control form-control-lg" id="nombre"
+										placeholder="Nombre" required>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-control-feedback">
+								<span class="text-danger align-middle"> <i
+									class="fa fa-close"> Error Nombre</i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 field-label-responsive">
+							<label for="email">E-Mail</label>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon" style="width: 2.6rem">
+										<i class="fa fa-at"></i>
+									</div>
+									<input type="text" name="email" class="form-control" id="email"
+										placeholder="correo@gmail.com" required>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-control-feedback">
+								<span class="text-danger align-middle"> <i
+									class="fa fa-close"> Error Email</i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 field-label-responsive">
+							<label for="password">Password</label>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group has-danger">
+								<div class="input-group">
+									<div class="input-group-addon" style="width: 2.6rem">
+										<i class="fa fa-key"></i>
+									</div>
+									<input type="password" name="password" class="form-control"
+										id="password" placeholder="Password" required>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-control-feedback">
+								<span class="text-danger align-middle"> <i
+									class="fa fa-close"> Password Error</i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 field-label-responsive">
+							<label for="password">Confirmar Password</label>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-addon" style="width: 2.6rem">
+										<i class="fa fa-repeat"></i>
+									</div>
+									<input type="password" name="password-confirmacion"
+										class="form-control" id="password-confirmacion"
+										placeholder="Password" required>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-control-feedback">
+								<span class="text-danger align-middle"> <i
+									class="fa fa-close"> Password ConfirmaciÃ³n Error</i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-success">
+								<i class="fa fa-user-plus"></i> Registrar
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
-
-
-		<div class="row">
-			<div class="btn-group">
-				<button type="button" id="btnGroupDrop1"
-					class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">
-					Primary <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu"
-					aria-labelledby="btnGroupDrop1">
-					<li><a href="http://www.google.es">Google</a></li>
-					<li><a href="http://www.google.es">Google</a></li>
-				</ul>
-			</div>
-			<div class="btn-group" role="group">
-				<button id="btnGroupDrop1" type="button"
-					class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false">Dropdown</button>
-				<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-					<a class="dropdown-item" href="#">Dropdown link</a> <a
-						class="dropdown-item" href="#">Dropdown link</a>
-				</div>
+		<div class="row justify-content-center subscriber">
+			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<h1>Subscribe</h1>
+				<hr>
+				<form class="form-inline">
+					<label class="sr-only" for="emailS">Email</label>
+					<div class="input-group">
+						<div class="input-group-addon">@</div>
+						<input type="text" class="form-control" id="emailS"
+							placeholder="Email para subscribir">
+					</div>
+					<div class="input-group">
+						<label class="mr-sm-2" for="caducidad">Caducidad</label> <select
+							class="custom-select" id="caducidad">
+							<option selected>Elige...</option>
+							<option value="1">Mensual</option>
+							<option value="2">Anual</option>
+							<option value="3">Vida</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-primary">SubscrÃ­beme</button>
+				</form>
 			</div>
 		</div>
-
 	</div>
 
-
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

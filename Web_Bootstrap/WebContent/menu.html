@@ -79,13 +79,15 @@
 				<div class="mx-auto">
 					<h2>Tablas</h2>
 				</div>
-				<table class="table table-responsive table-striped table-bordered table-hover table-sm">
+				<table
+					class="table table-responsive table-striped table-bordered table-hover table-sm">
 					<thead class="thead-default">
 						<tr>
 							<th>Nº</th>
 							<th>Nombre</th>
 							<th>Apellidos</th>
 							<th>Login</th>
+							<th></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -94,18 +96,47 @@
 							<td>Yo</td>
 							<td>YOYO</td>
 							<td>yo@yo.es</td>
+							<td>
+								<button type="button" class="btn btn-danger btn-sm"
+									data-toggle="modal" data-target="#ejemploModal">
+									<i class="fa fa-trash mr-1" aria-hidden="true"></i>Borrar
+								</button>
+								<div class="modal fade" id="ejemploModal" tabindex="-1"
+									role="dialog" aria-labelledby="Ejemplo Modal"
+									aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title">Borrado Usuario</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">¿Desea borrar al Usuario YO?</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-danger"
+													data-dismiss="modal">No</button>
+												<button type="button" class="btn btn-primary">Sí</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
 						</tr>
 						<tr class="table-danger">
 							<td>2</td>
 							<td>Tu</td>
 							<td>TUTU</td>
 							<td>tu@tu.es</td>
+							<td></td>
 						</tr>
 						<tr class="bg-warning">
 							<td>3</td>
 							<td>El</td>
 							<td>ELEL</td>
 							<td>el@el.es</td>
+							<td></td>
 						</tr>
 					</tbody>
 				</table>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+<script type="text/javascript" src="js/codigo.js"></script>
+
+<script type="text/javascript">
+	document.addEventListener("load", init(), false);
+</script>
+
+</head>
+<body>
+	<p>Desarrolle un función que pegunte nuestro nombre y edad y
+		muestre el resultado de los días que hemos vivido hasta el momento</p>
+
+	<div style="align-content: center;">
+		<table>
+			<tr>
+				<td><label>Nombre</label></td>
+				<td><input type="text" name="nombre" id="nombre"></td>
+			</tr>
+			<tr>
+				<td><label>Edad</label></td>
+				<td><input type="number" name="edad" id="edad"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" name="calcular"
+					id="calcular" value="Calcular"></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<span id="resultado"></span>
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById("calcular").addEventListener("click",
+				calcularEdad);
+	</script>
+
+	<p>Pedir dos números e indicar cual es el mayor de los dos</p>
+	<div>
+		<form action="#" name="formu1">
+			<h4 id="mensaje"></h4>
+			<label>Num 1</label><input type="number" name="num1" id="num1"><br />
+			<label>Num 2</label><input type="number" name="num2" id="num2"><br />
+			<input type="button" value="Calcular"
+				onclick="calcularMayor(document.formu1.num1.value, document.formu1.num2.value)">
+		</form>
+	</div>
+
+	<p>Pedir frase y número de repetición y mostrar la frase tantas
+		veces como indique número</p>
+	<div>
+		<form action="#" name="formu2">
+			<h4 id="mensaje2"></h4>
+			<label>Frase</label><input type="text" name="frase" id="frase"><br />
+			<label>Num Repeticiones</label><input type="number" name="contador"
+				id="contador"><br /> <input type="button" value="Mostrar"
+				onclick="mostrarFrase(document.formu2.frase.value, document.formu2.contador.value)">
+		</form>
+	</div>
+
+	<p>Pedir un número y mostrar el factorial del número</p>
+	<div>
+		<label>Número</label><input type="number" name="facto" id="facto"><input
+			type="button" name="bfacto" value="Mostrar Facto"
+			onclick="mostrarFacto()"><span id="resFacto"
+			style="margin-left: 5px; color: red; font-style: italic; font-weight: bold;"></span>
+	</div>
+
+	<p>Mostrar a^b pidiendo los dos números. Utilice la clase Math</p>
+	<div>
+		<label>Calcular</label><input type="number" name="base" id="base">^<input
+			type="number" name="exponente" id="exponente"><input
+			type="button" value="=" onclick="calcularPotencia()"><span
+			id="potencia"
+			style="margin-left: 5px; color: red; font-style: italic; font-weight: bold;"></span>
+	</div>
+
+	<p>Calcule aleatoriamente un número entre 1 y 10 e intente
+		adivinarlo</p>
+	<div>
+		<label>Número</label><input type="text" name="numero" id="numero"><input
+			type="button" value="Adivinar"
+			onclick="adivinarNumero(document.getElementById('numero').value)"><span
+			id="mensajeAdivinar"></span>
+	</div>
+</body>
+</html>

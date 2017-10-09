@@ -177,3 +177,29 @@ function esPrimo(numero) {
 	}
 	return true;
 }
+
+function pulsadoNumero(numero) {
+	var resultado = document.getElementById("calcu");
+	resultado.value += numero;
+}
+
+function pulsadoOperacion(op) {
+	var resultado = document.getElementById("calcu");
+	if (!resultado.value.length == 0 && comprobarUltimoCaracter()) {
+		resultado.value += op;
+	}
+}
+
+function pulsadoIgual() {
+	var resultado = document.getElementById("calcu");
+	resultado.value = eval(resultado.value);
+}
+
+function comprobarUltimoCaracter() {
+	var resultado = document.getElementById("calcu").value;
+	var ult = resultado.charAt(resultado.length-1);
+	if (ult != "+" && ult != "-" && ult != "*" && ult != "/")
+		return true;
+	else
+		return false;
+}

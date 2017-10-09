@@ -124,6 +124,10 @@ function reiniciarRepetido() {
 }
 
 function calcularMultiplos(numero) {
+	var multiplos = new Array();
+	var pos = 0;
+	
+	
 	var objeto = document.getElementById("resultadoMult");
 	objeto.innerHTML = "<p style='border: 1px solid black'>Múltiplos de "
 			+ numero + "</p>";
@@ -133,9 +137,43 @@ function calcularMultiplos(numero) {
 	objeto.innerHTML += "1 ";
 	while (cont < 15) {
 		if (i % numero == 0) {
-			objeto.innerHTML += i + " ";
+			//objeto.innerHTML += i + " ";
+			multiplos[pos] = i;
+			pos++;
 			cont++;
 		}
 		i++;
 	}
+	
+	for (var i = 0; i < multiplos.length; i++) {
+		objeto.innerHTML += multiplos[i] + " ";
+	}
+}
+
+function calcularTabla(numero) {
+	var objeto = document.getElementById("resultadoTabla");
+	objeto.innerHTML = "";
+	for (var i = 1; i <= 10; i++) {
+		objeto.innerHTML += numero + "*" + i + " = " + (numero * i) + "<br />";
+	}
+}
+
+function comprobarPrimo(numero) {
+	var objeto = document.getElementById("resultadoPrimo");
+	if (esPrimo(numero)) {
+		objeto.innerHTML = "<p style='color: blue'>" + numero + " es PRIMO</p>";
+	} else {
+		objeto.innerHTML = "<p style='color: red'>" + numero + " no es PRIMO</p>";
+	}
+}
+
+function esPrimo(numero) {
+	var resto;
+	for (var i = 2; i < numero-1; i++) {
+		resto=numero%i;
+		if (resto == 0) {
+			return false;
+		} 
+	}
+	return true;
 }

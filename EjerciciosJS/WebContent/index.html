@@ -109,18 +109,34 @@
 		número introducido por el usuario. El programa ha de tener la
 		posibilidad de volver a empezar</p>
 	<div>
-		<label>Número con Múltiplos</label> <input type="number" name="numMult"
-			id="numMult" onfocus="this.select()"> 
-			
-		<input
+		<label>Número con Múltiplos</label> <input type="number"
+			name="numMult" id="numMult" onfocus="this.select()"> <input
 			type="button" id="calcularMult" value="Calcular Multiplos"
 			onclick="calcularMultiplos(document.getElementById('numMult').value)">
-		<br />
-		<span id="resultadoMult"></span>
+		<br /> <span id="resultadoMult"></span>
 
 	</div>
 
 	<p>Haz un programa que nos pida un número y dé como resultado la
 		tabla de multiplicar del número</p>
+	<div>
+		<label>Tabla de Multiplicar</label> <input type="number"
+			name="numTabla" id="numTabla" onfocus="this.select()"> <input
+			type="button" id="calcularTabla" value="Tabla de Multiplicar"
+			onclick="calcularTabla(document.getElementById('numTabla').value)">
+		<br /> <span id="resultadoTabla"></span>
+
+	</div>
+
+	<p>Con función con return. Programa que determina si un número es
+		primo, pero utilizando una función</p>
+
+	<div>
+		<label>¿Es Primo?</label> <input type="number" name="primo" id="primo">
+		<input type="button" value="Comprobar"
+			onclick="comprobarPrimo(document.getElementById('primo').value)">
+		<span id="resultadoPrimo"></span>
+	</div>
+
 </body>
 </html>

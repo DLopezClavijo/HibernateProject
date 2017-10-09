@@ -93,5 +93,19 @@
 		el número de números introducidos, exceptuando el 9999. Además nos dé
 		la suma de todos los números introducidos, exceptuando el 9999. Además
 		nos dé el producto de los números introducidos, exceptuando el 9999</p>
+	<div>
+		<label>Número Repetición</label>
+		
+			<input type="number" name="numrep"
+			id="numrep" max="9999" min="1">
+			
+			<input type="button"
+			id="calcularRep" value="Calcular"
+			onclick="calcularRepetido(document.getElementById('numrep').value)">
+			
+			<input type="button" value="Reiniciar" onclick="reiniciarRepetido()">
+		
+			<span id="resultadoRep"></span>
+	</div>
 </body>
 </html>

@@ -89,3 +89,30 @@ function adivinarNumero(numero) {
 		document.getElementById("mensajeAdivinar").innerHTML = "No tiene más intentos";
 	}
 }
+
+var contador = 0;
+var suma = 0;
+
+function calcularRepetido(numero) {
+	if (numero != 9999) {
+		contador++;
+		suma += parseInt(numero);
+	} else {
+		// mostrar contador en el span
+		document.getElementById("resultadoRep").innerHTML = "Nº Introducidos: "
+				+ contador + "\nSuma: " + suma;
+
+		contador = 0;
+		suma = 0;
+
+		document.getElementById("calcularRep").disabled = true;
+	}
+}
+
+function reiniciarRepetido() {
+	contador = 0;
+	suma = 0;
+	document.getElementById("calcularRep").disabled = false;
+	document.getElementById("numrep").value = "";
+	document.getElementById("numrep").focus();
+}

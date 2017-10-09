@@ -94,19 +94,33 @@
 		la suma de todos los números introducidos, exceptuando el 9999. Además
 		nos dé el producto de los números introducidos, exceptuando el 9999</p>
 	<div>
-		<label>Número Repetición</label>
-		
-			<input type="number" name="numrep"
-			id="numrep" max="9999" min="1">
-			
-			<input type="button"
-			id="calcularRep" value="Calcular"
+		<label>Número Repetición</label> <input type="number" name="numrep"
+			id="numrep" max="9999" min="1" onfocus="this.select()"> <input
+			type="button" id="calcularRep" value="Calcular"
 			onclick="calcularRepetido(document.getElementById('numrep').value)">
-			
-			<input type="button" value="Reiniciar" onclick="reiniciarRepetido()">
-		
-			<span id="resultadoRep"></span>
-			
+
+		<input type="button" value="Reiniciar" onclick="reiniciarRepetido()">
+
+		<span id="resultadoRep"></span>
+
 	</div>
+
+	<p>Haz un programa que escriba los 15 primeros múltiplos de un
+		número introducido por el usuario. El programa ha de tener la
+		posibilidad de volver a empezar</p>
+	<div>
+		<label>Número con Múltiplos</label> <input type="number" name="numMult"
+			id="numMult" onfocus="this.select()"> 
+			
+		<input
+			type="button" id="calcularMult" value="Calcular Multiplos"
+			onclick="calcularMultiplos(document.getElementById('numMult').value)">
+		<br />
+		<span id="resultadoMult"></span>
+
+	</div>
+
+	<p>Haz un programa que nos pida un número y dé como resultado la
+		tabla de multiplicar del número</p>
 </body>
 </html>

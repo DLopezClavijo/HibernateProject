@@ -92,18 +92,22 @@ function adivinarNumero(numero) {
 
 var contador = 0;
 var suma = 0;
+var producto = 1;
 
 function calcularRepetido(numero) {
 	if (numero != 9999) {
 		contador++;
 		suma += parseInt(numero);
+		producto *= parseInt(numero);
+		document.getElementById("numrep").focus();
 	} else {
 		// mostrar contador en el span resultadoRep
 		document.getElementById("resultadoRep").innerHTML = "Nº Introducidos: "
-				+ contador + "\nSuma: " + suma;
+				+ contador + " Suma: " + suma + " Producto: " + producto;
 
 		contador = 0;
 		suma = 0;
+		producto = 1;
 
 		document.getElementById("calcularRep").disabled = true;
 	}
@@ -112,7 +116,26 @@ function calcularRepetido(numero) {
 function reiniciarRepetido() {
 	contador = 0;
 	suma = 0;
+	producto = 1;
 	document.getElementById("calcularRep").disabled = false;
 	document.getElementById("numrep").value = "";
 	document.getElementById("numrep").focus();
+	document.getElementById("resultadoRep").innerHTML = "";
+}
+
+function calcularMultiplos(numero) {
+	var objeto = document.getElementById("resultadoMult");
+	objeto.innerHTML = "<p style='border: 1px solid black'>Múltiplos de "
+			+ numero + "</p>";
+
+	var i = 1;
+	var cont = 0;
+	objeto.innerHTML += "1 ";
+	while (cont < 15) {
+		if (i % numero == 0) {
+			objeto.innerHTML += i + " ";
+			cont++;
+		}
+		i++;
+	}
 }

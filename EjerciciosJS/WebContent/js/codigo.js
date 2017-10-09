@@ -98,7 +98,7 @@ function calcularRepetido(numero) {
 		contador++;
 		suma += parseInt(numero);
 	} else {
-		// mostrar contador en el span
+		// mostrar contador en el span resultadoRep
 		document.getElementById("resultadoRep").innerHTML = "Nº Introducidos: "
 				+ contador + "\nSuma: " + suma;
 

@@ -137,39 +137,63 @@
 			onclick="comprobarPrimo(document.getElementById('primo').value)">
 		<span id="resultadoPrimo"></span>
 	</div>
-	
+
 	<p>Calculadora</p>
-	
+
 	<div>
 		<table>
 			<tr>
-				<td colspan="4"><input type="text" name="calcu" id="calcu" readonly="readonly"></td>
+				<td colspan="4"><input type="text" name="calcu" id="calcu"
+					readonly="readonly"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="7" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="8" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="9" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="+" onclick="pulsadoOperacion(this.value)"></td>
+				<td><input type="button" value="7"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="8"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="9"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="+"
+					onclick="pulsadoOperacion(this.value)"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="4" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="5" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="6" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="-" onclick="pulsadoOperacion(this.value)"></td>
+				<td><input type="button" value="4"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="5"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="6"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="-"
+					onclick="pulsadoOperacion(this.value)"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="1" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="2" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="3" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="*" onclick="pulsadoOperacion(this.value)"></td>
+				<td><input type="button" value="1"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="2"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="3"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="*"
+					onclick="pulsadoOperacion(this.value)"></td>
 			</tr>
 			<tr>
-				<td><input type="button" value="0" onclick="pulsadoNumero(this.value)"></td>
-				<td><input type="button" value="." onclick="pulsadoOperacion(this.value)"></td>
+				<td><input type="button" value="0"
+					onclick="pulsadoNumero(this.value)"></td>
+				<td><input type="button" value="."
+					onclick="pulsadoOperacion(this.value)"></td>
 				<td><input type="button" value="=" onclick="pulsadoIgual()"></td>
-				<td><input type="button" value="/" onclick="pulsadoOperacion(this.value)"></td>
+				<td><input type="button" value="/"
+					onclick="pulsadoOperacion(this.value)"></td>
 			</tr>
 		</table>
+	</div>
+
+	<p>Dado un textarea y un botón. Mostrar el número de vocales y
+		cuantas son "a", "e", ...</p>
+	<div>
+		<textarea rows="5" cols="25" id="textoVocales" name="textoVocales"></textarea>
+		<input type="button" value="Calcular" onclick="comprobarVocales()"><br />
+		<span id="resultVocales"></span>
 	</div>
 
 </body>

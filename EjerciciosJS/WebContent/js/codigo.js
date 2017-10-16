@@ -126,8 +126,7 @@ function reiniciarRepetido() {
 function calcularMultiplos(numero) {
 	var multiplos = new Array();
 	var pos = 0;
-	
-	
+
 	var objeto = document.getElementById("resultadoMult");
 	objeto.innerHTML = "<p style='border: 1px solid black'>Múltiplos de "
 			+ numero + "</p>";
@@ -137,14 +136,14 @@ function calcularMultiplos(numero) {
 	objeto.innerHTML += "1 ";
 	while (cont < 15) {
 		if (i % numero == 0) {
-			//objeto.innerHTML += i + " ";
+			// objeto.innerHTML += i + " ";
 			multiplos[pos] = i;
 			pos++;
 			cont++;
 		}
 		i++;
 	}
-	
+
 	for (var i = 0; i < multiplos.length; i++) {
 		objeto.innerHTML += multiplos[i] + " ";
 	}
@@ -163,17 +162,18 @@ function comprobarPrimo(numero) {
 	if (esPrimo(numero)) {
 		objeto.innerHTML = "<p style='color: blue'>" + numero + " es PRIMO</p>";
 	} else {
-		objeto.innerHTML = "<p style='color: red'>" + numero + " no es PRIMO</p>";
+		objeto.innerHTML = "<p style='color: red'>" + numero
+				+ " no es PRIMO</p>";
 	}
 }
 
 function esPrimo(numero) {
 	var resto;
-	for (var i = 2; i < numero-1; i++) {
-		resto=numero%i;
+	for (var i = 2; i < numero - 1; i++) {
+		resto = numero % i;
 		if (resto == 0) {
 			return false;
-		} 
+		}
 	}
 	return true;
 }
@@ -197,9 +197,45 @@ function pulsadoIgual() {
 
 function comprobarUltimoCaracter() {
 	var resultado = document.getElementById("calcu").value;
-	var ult = resultado.charAt(resultado.length-1);
+	var ult = resultado.charAt(resultado.length - 1);
 	if (ult != "+" && ult != "-" && ult != "*" && ult != "/")
 		return true;
 	else
 		return false;
+}
+
+function comprobarVocales() {
+	var campo = document.getElementById("textoVocales");
+	// array de contadores
+	var contadores = new Array(0, 0, 0, 0, 0);
+
+	// total de vocales
+	var totalVocales = 0;
+
+	// recorrer el texto e ir comprobando
+	for (var i = 0; i < campo.value.length; i++) {
+		var caracter = campo.value.toLowerCase().charAt(i);
+		var pos = posicionVocal(caracter);
+		if (pos != -1) {
+			contadores[pos]++;
+			totalVocales++;
+		}
+	}
+
+	var spanresult = document.getElementById("resultVocales");
+	spanresult.innerHTML = "A: " + contadores[0] + "<br/>E: " + contadores[1]
+			+ "<br/>I: " + contadores[2] + "<br/>O: " + contadores[3] + "<br/>U: "
+			+ contadores[4] + "<br/>TOTAL: " + totalVocales;
+	console.log(totalVocales);
+	console.log(contadores);
+}
+
+function posicionVocal(caracter) {
+	var vocales = new Array("a", "e", "i", "o", "u");
+	for (var i = 0; i < vocales.length; i++) {
+		if (vocales[i] == caracter) {
+			return i;
+		}
+	}
+	return -1;
 }

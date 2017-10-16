@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>POO 2</title>
+<script type="text/javascript">
+window.Persona = window.Persona || {};
+window.Persona = (function () {
+	"use strict";
+
+	function Persona() {
+		
+	}
+	var nombre = "";
+
+	Persona.prototype.getNombre = function () {
+		return this.nombre;
+	};
+
+	Persona.prototype.setNombre = function (nombre) {
+		this.nombre = nombre;
+	};
+
+	function pensar(pensamiento) {
+		document.write(pensamiento);
+	}
+
+	return Persona;
+}());
+
+var gustavo = new Persona();
+gustavo.setNombre("Gustavo");
+document.write("Mi nombre es " + gustavo.getNombre());
+</script>
+</head>
+<body>
+
+</body>
+</html>

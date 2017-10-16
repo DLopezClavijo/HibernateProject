@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>POO</title>
+<script type="text/javascript">
+var Persona = {
+		nombre: "",
+		getNombre: function () {
+			return this.nombre;
+		},
+		setNombre: function (nombre) {
+			this.nombre = nombre;
+		},
+		pensar: function (pensamiento) {
+			document.write(pensamiento);
+		}
+}
+
+Persona.setNombre("Javier");
+document.write("Mi nombre es " + Persona.getNombre());
+</script>
+</head>
+<body>
+
+</body>
+</html>
